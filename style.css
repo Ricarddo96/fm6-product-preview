@@ -1,0 +1,132 @@
+:root {
+  --dark-cyan: hsl(158, 36%, 37%);
+  --cream: hsl(30, 38%, 92%);
+  --very-dark-blue: hsl(212, 21%, 14%);
+  --dark-grayish-blue: hsl(228, 12%, 48%);
+  --white: hsl(0, 0%, 100%);
+}
+
+body {
+  width: 100%;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--cream);
+}
+
+.text__tag,
+.text__description,
+.price__old {
+  /* font-family: "Monserrat"; */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1rem;
+  color: var(--dark-grayish-blue);
+}
+
+.text__title,
+.price__real {
+  font-family: "Fraunces";
+}
+
+.main__card {
+  background-color: var(--white);
+  width: 90%;
+  border-radius: 1rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 0;
+}
+
+.card__img {
+  width: 100%;
+}
+
+.card__info {
+  margin: 1.3rem;
+}
+
+.text__tag {
+  font-size: 0.75rem;
+}
+
+.text__title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.6rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.text__description {
+  font-size: clamp(0.9rem, 1px, 3rem);
+  margin: 0.7rem 0;
+}
+
+.info__price {
+  display: flex;
+  flex-direction: row;
+}
+
+.price__real {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin: 0.3rem 0;
+  color: var(--dark-cyan);
+}
+
+.price__old {
+  font-size: 0.85rem;
+  margin: 0.2rem 0.9rem;
+  text-decoration: line-through;
+}
+
+.info__btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: var(--dark-cyan);
+  padding: 0.8rem;
+  border-radius: 0.5rem;
+  margin-top: 0.9rem;
+  color: var(--white);
+  transition: all 0.3s;
+}
+
+.info__btn:hover {
+  scale: 1.05;
+}
+
+.info__btn-text {
+  width: 6rem;
+}
+
+@media (min-width: 700px) {
+  .main__card {
+    max-width: 600px;
+    max-height: 500px;
+    flex-direction: row;
+  }
+  .card__img {
+    content: url(images/image-product-desktop.jpg);
+    max-width: 50%;
+    max-height: 500px;
+  }
+  .card__info {
+    margin: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .text__title {
+    font-size: 2rem;
+    line-height: 2rem;
+    margin: 1rem 0;
+  }
+  .text__description {
+    margin-top: 1.7rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
